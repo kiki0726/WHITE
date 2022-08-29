@@ -10,7 +10,7 @@ window.onload = function() {
     for (let i = 0; i < blogs.title.length; i++) {
         let ul = document.getElementById('blogs-list');
         let a = document.createElement('a');
-        a.setAttribute('href', 'https://kiki0726.github.io/WHITE/' + blogs.id[i] + '.html');
+        a.setAttribute('href', 'https://kiki0726.github.io/WHITE/archive/' + blogs.id[i] + '.html');
         a.setAttribute('id', 'a' + blogs.id[i]);
         ul.appendChild(a);
 

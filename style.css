@@ -13,6 +13,18 @@ body {
 }
 
 /*------------------
+        フォント 
+-------------------*/
+.font-title {
+    font-size: 40px;
+}
+
+.font-date {
+    font-size: 10px;
+}
+
+
+/*------------------
         ヘッダー
 -------------------*/
 .header {
@@ -67,14 +79,6 @@ body {
 -------------------*/
 main {
     color: whitesmoke;
-}
-
-.font-title {
-    font-size: 40px;
-}
-
-.font-date {
-    font-size: 10px;
 }
 
 .blog-date {

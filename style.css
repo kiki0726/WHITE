@@ -4,13 +4,14 @@
         全体 
 -------------------*/
 body {
-    background-color:rgb(56, 52, 50);
+    background-color:#403834;
 }
 
 .container {
-    max-width: 1170px;
-    margin: 0 auto;
-    padding: 0 30px;
+    width: 820px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #252323;
 }
 
 /*------------------
@@ -51,7 +52,7 @@ body {
         ヘッダーナビ
 -------------------*/
 .header-nav {
-    background-color: black;
+    background-color: #252323;
     width: 100%;
 }
 
@@ -68,22 +69,43 @@ body {
 /*------------------
         アーカイブ
 -------------------*/
+.archive-container {
+    width: 820px;
+    margin: 20px auto;
+    background-color: #252323;
+}
+
 .blogs-list__item {
     color: whitesmoke;
-    padding: 5px; 
-    margin: 10px;
+    padding: 5px;
     border: 1px solid gray;
 }
 
 /*------------------
         ブログ本文
 -------------------*/
+
+.blog-container {
+    width: 820px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #252323;
+}
+
 main {
     color: whitesmoke;
 }
 
+.blog-title {
+    padding: 10px;
+}
+
 .blog-date {
     margin: 0 10px;
+}
+
+.blog-body {
+    line-height: 3em;
 }
 
 /*------------------

@@ -14,7 +14,7 @@ window.onload = function() {
         a.setAttribute('id', 'a' + blogs.id[i]);
         ul.appendChild(a);
 
-        let anchor = document.getElementById('a220829');
+        let anchor = document.getElementById('a' + blogs.id[i]);
         let li = document.createElement('li');
         li.innerText = blogs.title[i] + '   /   ' + blogs.date[i];
         li.setAttribute('class', 'blogs-list__item');

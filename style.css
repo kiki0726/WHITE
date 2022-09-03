@@ -108,6 +108,23 @@ main {
     line-height: 3em;
 }
 
+.blog-footer {
+    display: flex;
+    margin: 10px 0;
+}
+
+.blog-footer__pre {
+    width: 50%;
+    text-align: right;
+    padding: 10px;
+}
+
+.blog-footer__next {
+    width: 50%;
+    text-align: left;
+    padding: 10px;
+}
+
 /*------------------
         フッター
 -------------------*/

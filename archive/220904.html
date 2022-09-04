@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ブログ制作記・４|WHITE Ink.</title>
+    <title>ブログ制作記・５|WHITE Ink.</title>
     <link rel=”icon” href=“../images/favicon.ico”>
     <link rel="stylesheet" href="../destyle.css">
     <link rel="stylesheet" href="../style.css">
@@ -41,25 +41,22 @@
     <main>
         <div class="blog-container">
             <div class="blog-title">
-                <h1 class="font-title">ブログ制作記・4</h1>
+                <h1 class="font-title">ブログ制作記・５</h1>
             </div>
             <div class="blog-date">
-                <input type="text" class="font-date" id="blog-tag" value="2022.09.03">
+                <input type="text" class="font-date" id="blog-tag" value="2022.09.04">
             </div>
             <div class="blog-body">
                 進捗
                 <br>
-                ・ブログの下に前記事と次の記事に移動するボタンを追加
+                ・faviconの設定
                 <br>
-                ・データ構造の見直し
+                ・カウンターの設置
                 <br>
+                今日はfaviconの設定とカウンターの設置を目標にしていこうと思う。faviconは.icoという、いろんなサイズのアイコン画像がひとまとまりになったファイル形式のものをhtmlのheadに記述すれば設定されるはずだが、なぜか上手くいってないので直そうと思う。
                 <br>
-                今までは記事の情報をまとめたオブジェクトを、記事一覧を生成するファイルに書いていたが、新しくファイルを作りオブジェクトを独立させ、それをexportし、それぞれ使うファイルからimportさせれば使うことができる。ESmoduleという仕組みらしい。<br>
-                そしてこのページの上部にある記事一覧を生成するファイル「setArchive.mjs」と、この下にある＜前　次＞みたいなボタンを生成する「setPreNextButton.mjs（命名がダサくて恥ずかしい）」を、このページを記述してるhtmlファイルに＜script type="module"...のように記述すると片方が読み込めない事案が発生。<br>
-                原因としては両方のファイルにwindow.onloadを使いその中に処理を書いていたわけだが、複数のファイルを読み込んんだ場合同じ処理は一度しか行われないため片方しか実行されてなかったという。なんとか山を乗り切れた。
+                カウンターは作り方が全くわからないが他の人のブログを参考にしたりググろうと思う。カウンターの設置場所も用意しないといけない。
                 <br>
-                データ構造については考えるのがかなり楽しい。
-                前の記事、次の記事に移動するボタンを生成するファイルは記事ページでしか使わないため今までは記事のhtmlのみが入っているフォルダに入れていたが、よくない気がしたのでやめた。
                 <br>
             </div>
             <div class="blog-footer">

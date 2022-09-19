@@ -2,8 +2,6 @@
 
 import BLOGS from './blogs.js';
 
-
-console.log('loadarchive');
 // ブログ一覧の設置
 for (let i = 0; i < BLOGS.title.length; i++) {
     let ul = document.getElementById('blogs-list');

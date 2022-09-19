@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="twitter:card" content="summary">
+    <meta property="og:url" content="https://kiki0726.github.io/WHITE/index.html">
+    <meta property="og:title" content="WHITE Ink.">
+    <meta property="og:description" content="ブログ">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ブログ制作記・6|WHITE Ink.</title>
+    <link rel="stylesheet" href="../destyle.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <!-- ヘッダー -->
+    <header>
+        <div class="menu" id="menu"></div>
+        <a href="#" class="header-container">
+            <img class="header__logo" src="../images/logo.png" alt="ロゴ">
+            <h2 class="header__title">WHITE Ink.</h2>
+        </a>
+        <div class="side" id="side"></div>
+    </header>
+
+    <div class="body-wrapper">
+        <!-- グローバルナビ -->
+        <nav class="menu-nav" id="menu-nav">
+            <ul class="nav-list">
+                <li class="nav-list__item" id="nav-list__close">×</li>
+                <a href="https://kiki0726.github.io/WHITE/index.html" class="nav-list__item">
+                    <li>HOME</li>
+                </a>
+                <a href="https://kiki0726.github.io/WHITE/profile.html" class="nav-list__item">
+                    <li>PROFILE</li>
+                </a>
+                <a href="#" class="nav-list__item">
+                    <li>EXIT</li>
+                </a>
+            </ul>
+        </nav>
+
+         <!-- ブログ一覧 -->
+        <div class="archive-container">
+            <div class="archive">
+                <ul id="blogs-list">
+                </ul>
+            </div>
+        </div>
+
+        <!-- メインコンテンツ -->
+        <div class="middle-container">
+
+            <!-- ブログ本文（可変） -->
+            <div class="main">
+                <div class="blog-title">
+                    <h1 class="font-title">ブログ制作記・6</h1>
+                </div>
+                <div class="blog-date">
+                    <input type="text" class="font-date" id="blog-tag" value="2022.09.19">
+                </div>
+                <div class="blog-body">
+                    <p class="font-normal">
+                        進捗（生きてました）<br>
+                        <a href="#ch1" class="font-index">1.rdの迷宮へ<br></a>
+                        <a href="#ch2" class="font-index">2.グリッドデビューなるか<br></a>
+                        <a href="#ch3" class="font-index">3.clampとメディアクエリを打ち続ける日々<br></a>
+                        <a href="#ch4" class="font-index">4.授業再開まであと二日<br></a>
+                        <br>
+                        <br>
+                    </p>
+                    <h2 class="font-chapter" id="ch1">
+                        1.rdの迷宮へ
+                    </h2>
+                    <p class="font-normal">
+                        rdって？？レスポンシブデザインです<br>
+                        なぜか一文が長くなるとこの部分の横のマージンが無くなるので<br>
+                        略しただけで、多分業界では略されてないです。<br>
+                        それでひたすらrdについて調べていたらサイトを一から作ったほうが楽なことに気づき、<br>
+                        更新までかなり時間がかかった次第です。あと親の実家に帰省したりイカのゲームをやったり<br>
+                        （結局marginなくなる問題はmarginを左右につけるだけで治った）<br>
+                        <br>
+                    </p>
+                    <h2 class="font-chapter" id="ch2">
+                        2.グリッドデビューなるか
+                    </h2>
+                    <p class="font-normal">
+                        更新してない時に興味の赴くままにMDNさんのページを読み漁ってたのですが、
+                        （MDNって誰が運営してるんですか？なんか公式っぽい感じするんだけどというか
+                        多分公式なんでしょ？あんな詳しいの公式としか思えないんだけど、万が一の可能性を考えて
+                        誰か教えといてください、あ、コメント残せない？そりゃあコメント欄実装してないからな！！できるもんならしてみろや！！）
+                        サイトの枠組みを作るのに便利なcssの要素としてgridというものがあるらしく、
+                        これがめっちゃ便利で、もう何でもできる感じがするのですが、まだこのサイトの方がgridを使うほど複雑な
+                        構造を成してないという、サイトが未発達なパターンで使えないでいます。使い道のない最強の能力を手にした
+                        超能力漫画の主人公みたいでかっこいいでしょ。どう？？そうでもない？<br>
+                        <br>
+                    </p>
+                    <h2 class="font-chapter" id="ch3">
+                        3.clampとメディアクエリを打ち続ける日々
+                    </h2>
+                    <p class="font-normal">
+                        そうして一からコーディングし直したわけですが、メディアクエリというものは大変なもので、
+                        スマホやPCの画面やタブレットや激細PCなどの、さまざまな大きさの画面に対してサイトのデザインが
+                        崩れないようにしないといけないわけで、ここで登場するのがcssのclamp関数くんです。クランプくんは
+                        文字サイズなどの要素の、最大と最小を決めてスクリーンサイズに対応させてその間のサイズに変化させることができます。
+                        はい、おっしゃる通りで、これを文字からサイトロゴから要素の余白からと、何から何までつけないといけないという、
+                        クランプ君に殺意さえ湧いてくる作業に追われていました。クランプって何やねんぶち壊すぞ
+                        <br>
+                        <br>
+                    </p>
+                    <h2 class="font-chapter" id="ch4">
+                        4.授業開始まであと二日
+                    </h2>
+                    <p class="font-normal">
+                        ということで大学が後二日で始まります。イカやりたい...一日中やりたい......<br>
+                        とりあえずサイトは形になったし、スマホからアクセスしても正視に耐えうる見た目にはなったので
+                        これでもう、「そういえばブログ開設したんだよね、そのリンク踏んでみ？え、なんのブログサービス使ってるかって？自作だけど？？」
+                        <br>「「「「「「自作だけど」」」」」」<br>という会話ができますね。自然に振る舞うためにこの会話の練習もしなきゃね。
+                        明日からはN予備校の授業を進めたり、サイトをアプデしていきたいですね。
+                        カウンターの設置とコメント欄の開設と検索機能ですね。
+                        <br>
+                        それではまた。
+                        <br>
+                    </p>
+                </div>
+                <div class="blog-footer">
+                    <div id="blog-footer__next" class="font-link">
+                    </div>
+                    <div id="blog-footer__pre" class="font-link">
+                    </div>
+                </div>
+            </div>
+
+            <!-- サイドバー -->
+            <div class="side-column" id="side-column">
+                <ul class="side-list">
+                    <li class="side-list__item" id="side__close">
+                        <p>×</p>
+                    </li>
+                    <li class="side-list__item">
+                        <div class="search-bar">
+                            <p>SEARCH</p>
+                        </div>
+                    </li>
+                    <li class="side-list__item">
+                        <p>INDEX</p>
+                        <a href="#ch1" class="font-step">1.rdの迷宮へ<br></a>
+                        <a href="#ch2" class="font-step">2.グリッドデビューなるか<br></a>
+                        <a href="#ch3" class="font-step">3.clampとメディアクエリを打ち続ける日々<br></a>
+                        <a href="#ch4" class="font-step">4.授業再開まであと二日<br></a>
+                    </li>
+                </ul>
+                <div class="contents-table">
+        
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="#" class="top-transition"></a>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <p class="footer__copyright">Copyright 2022 WHITE Ink. All Rights Reserved.</p>
+    </footer>
+
+    <!-- モジュール -->
+    <script src="../clickEvent.js"></script>
+    <script type="module" src="../setArchive.mjs"></script>
+    <script type="module" src="../setPreNextButton.mjs"></script>
+</body>
+</html>

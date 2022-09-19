@@ -1,132 +1,305 @@
-@charset "UTF-8";
-
-/*------------------
-        全体 
--------------------*/
-body {
-    background-color:#403834;
+:root {
+    --color_1: #403834;
+    --color_2: whitesmoke;
+    --color_3: #252323;
+    --font_normal: clamp(10px, 4vw, 17px);
+    --font_title: clamp(10px, 10vw, 45px);
+    --font_date: clamp(10px, 3vw, 15px);
+    --font_chapter: clamp(10px, 6vw, 25px);
 }
 
-a:hover {
-    opacity: 0.8;
+html {
+    scroll-behavior: smooth;
 }
 
 /*------------------
-        フォント 
+        フォント
 -------------------*/
+
 .font-title {
-    font-size: 2.5rem;
+    font-size: var(--font_title);
+    color: var(--color_2);
+}
+
+.font-normal {
+    font-size: var(--font_normal);
+    color: var(--color_2);
+    line-height: clamp(15px, 8vw, 30px);
 }
 
 .font-date {
-    font-size: 0.5rem;
+    font-size: var(--font_date);
+    color: var(--color_2);
 }
 
+.font-link {
+    font-size: var(--font_normal);
+    color: var(--color_2);
+}
+
+.font-chapter {
+    font-size: var(--font_chapter);
+    color: var(--color_2);
+    line-height: clamp(15px, 8vw, 30px);
+}
+
+.font-step {
+    font-size: var(--font_normal);
+    color: var(--color_3);
+}
+
+.font-index {
+    font-size: var(--font_normal);
+    color: var(--color_2);
+    background-color: var(--color_3);
+}
+
+/*------------------
+        メニューボタン
+-------------------*/
+
+.menu {
+    background-color: var(--color_2);
+    opacity: 0.8;
+    display: block;
+    width: clamp(15px, 10vw, 60px);
+    height: clamp(15px, 10vw, 60px);
+    position: fixed;
+    top: 15px;
+    left: 5px;
+    margin: 0;
+}
+
+.menu-nav {
+    transition: .5s ease;
+    position: fixed;
+    top: 0;
+    left: -150px;
+}
+
+.menu-nav.open {
+    top: 0;
+    left: 0;
+    width: clamp(10px, 40vw, 300px);
+    background-color: var(--color_2);
+}
+
+.nav-list__item {
+    padding: clamp(2px, 2vw, 10px);
+    font-size: clamp(5px, 8vw, 22px);
+    display: block;
+}
+
+/*------------------
+        サイドボタン
+-------------------*/
+
+.side {
+    background-color: var(--color_2);
+    opacity: 0.8;
+    display: block;
+    width: clamp(15px, 10vw, 60px);
+    height: clamp(15px, 10vw, 60px);
+    position: fixed;
+    top: 15px;
+    right: 5px;
+    margin: 0;
+}
+
+.side-column {
+    transition: .5s ease;
+    position: fixed;
+    top: 0;
+    right: -100vw;
+    width: clamp(10px, 40vw, 300px);
+    background-color: var(--color_2);
+}
+
+.side-column.open {
+    top: 0;
+    right: 0;
+    width: clamp(10px, 40vw, 300px);
+    padding: 0;
+    background-color: var(--color_2);
+}
+
+.side-list__item {
+    padding: clamp(2px, 2vw, 10px);
+    font-size: clamp(5px, 8vw, 22px);
+    display: block;
+}
 
 /*------------------
         ヘッダー
 -------------------*/
-.header {
-    background-color: whitesmoke;
-    display: flex;
-    width: 100%;
-}
 
-.header__title {
-    font-size: 4rem;
-    font-family: 'Courier New', Courier, monospace;
-    color: black;
-    text-align: center;
-    line-height: 70px;
+.header-container {
+    display: flex;
+    justify-content: center;
+    padding: clamp(2px, 5vw, 10px) 0;
+    background-color: var(--color_2);
 }
 
 .header__logo {
-    width: 50px;
-    height: 50px;
-    margin: 10px 20px;
+    width: clamp(15px, 10vw, 60px);
+    height: clamp(15px, 10vw, 60px);
 }
 
- /*------------------
-        ヘッダーナビ
+.header__title {
+    font-size: clamp(15px, 11vw, 65px);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/*------------------
+        ボディ
 -------------------*/
-.header-nav {
-    background-color: #252323;
-    width: 100%;
+
+.body-wrapper {
+    background-color: var(--color_1);
 }
 
-.nav-list {
-    display: flex;
-}
-
-.nav-list__item {
-    width: 20%;
-    padding: 10px;
-    color: whitesmoke;
+.main {
+    margin: 0 clamp(10px, 8vw, 30px);
 }
 
 /*------------------
         アーカイブ
 -------------------*/
+
 .archive-container {
-    width: clamp(300px, 100%, 80%);
-    margin: 20px auto;
-    background-color: #252323;
+    padding-top: clamp(5px, 5vw, 30px);
+}
+
+.archive {
+    margin: 0 auto;
+    width: clamp(50px, 80vw, 480px);
+    height: clamp(60px, 30vw, 240px);
+    overflow: scroll;
+    color: var(--color_2);
+    background-color: var(--color_3);
 }
 
 .blogs-list__item {
-    color: whitesmoke;
-    padding: 5px;
-    border: 1px solid gray;
+    font-size: clamp(3px, 4vw, 17px);
+    padding: clamp(4px, 2vw, 6px) 0;
+    border: 1px solid var(--color_2);
+    background-color: var(--color_3);
 }
 
 /*------------------
-        ブログ本文
+        本文
 -------------------*/
 
-.blog-container {
-    width: clamp(300px, 100%, 80%);
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #252323;
-}
-
-main {
-    color: whitesmoke;
-}
-
-.blog-title {
-    padding: 10px;
+.middle-container {
+    display: flex;
+    justify-content: space-around;
+    margin: clamp(2px, 10vw, 20px) 0;
 }
 
 .blog-date {
-    margin: 0 10px;
-}
-
-.blog-body {
-    line-height: 3em;
+    padding: clamp(4px, 1vw, 6px) 0;
 }
 
 .blog-footer {
     display: flex;
-    margin: 10px 0;
+    margin: clamp(5px, 10vw, 20px) 0;
 }
 
 #blog-footer__pre {
-    width: 50%;
+    width: 40vw;
     text-align: left;
-    padding: 0 20px;
 }
 
 #blog-footer__next {
-    width: 50%;
+    width: 40vw;
     text-align: right;
-    padding: 0 20px;
+}
+
+/*------------------
+        トップ遷移ボタン
+-------------------*/
+
+.top-transition {
+    background-color: var(--color_2);
+    opacity: 0.8;
+    display: block;
+    width: clamp(15px, 10vw, 55px);
+    height: clamp(15px, 10vw, 55px);
+    position: fixed;
+    left: 30px;
+    bottom: 30px;
+    margin: 0;
+    opacity: 0.8;
 }
 
 /*------------------
         フッター
 -------------------*/
 .footer {
-    background-color: whitesmoke;
+    font-size: clamp(3px, 3vw, 15px);
+    background-color: var(--base-sub-color);
     font-family: 'Courier New', Courier, monospace;
+}
+
+@media screen and (min-width: 600px) {
+
+    .font-step {
+        font-size: var(--font_normal);
+        color: var(--color_2);
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .menu-nav {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        position: static;
+
+    }
+
+    .nav-list {
+        display: flex;
+        background-color: var(--color_3);
+        color: var(--color_2);
+    }
+
+    #nav-list__close {
+        display: none;
+    }
+
+    .header {
+        justify-content: flex-start;
+    }
+
+    .side {
+        display: none;
+    }
+
+    .side-column {
+        display: block;
+        position: static;
+        background-color: inherit;
+        color: var(--color_2);
+    }
+
+    .side-list {
+        position: sticky;
+        top: 0;
+        z-index: 5;
+    }
+
+    #side__close {
+        display: none;
+    }
+
+    .archive {
+        margin: 0 auto;
+        width: 80vw;
+        height: clamp(180px, 30vw, 200px);
+        overflow: scroll;
+        background-color: var(--color_1);
+        color: var(--color_2);
+    }
 }

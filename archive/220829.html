@@ -2,6 +2,10 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
+    <meta name="twitter:card" content="summary">
+    <meta property="og:url" content="https://kiki0726.github.io/WHITE/index.html">
+    <meta property="og:title" content="WHITE Ink.">
+    <meta property="og:description" content="ブログ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ブログ制作記・１|WHITE Ink.</title>
@@ -9,61 +13,100 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
+
     <!-- ヘッダー -->
     <header>
-        <a href="https://kiki0726.github.io/WHITE/index.html" class="header">
+        <div class="menu" id="menu"></div>
+        <a href="#" class="header-container">
             <img class="header__logo" src="../images/logo.png" alt="ロゴ">
             <h2 class="header__title">WHITE Ink.</h2>
         </a>
-        <div class="header-nav">
-            <ul class="nav-list">
-                <a href="https://kiki0726.github.io/WHITE/index.html">
-                    <li class="nav-list__item">HOME</li>
-                </a>
-                <a href="https://kiki0726.github.io/WHITE/profile.html">
-                    <li class="nav-list__item">PROFILE</li>
-                </a>
-                <a href="#">
-                    <li class="nav-list__item">EXIT</li>
-                </a>
-            </ul>
-        </div>
+        <div class="side" id="side"></div>
     </header>
-    <!-- ブログ一覧 -->
-    <div class="archive">
-        <div class="archive-container">
-            <ul id="blogs-list">
+
+    <div class="body-wrapper">
+        <!-- グローバルナビ -->
+        <nav class="menu-nav" id="menu-nav">
+            <ul class="nav-list">
+                <li class="nav-list__item" id="nav-list__close">×</li>
+                <a href="https://kiki0726.github.io/WHITE/index.html" class="nav-list__item">
+                    <li>HOME</li>
+                </a>
+                <a href="https://kiki0726.github.io/WHITE/profile.html" class="nav-list__item">
+                    <li>PROFILE</li>
+                </a>
+                <a href="#" class="nav-list__item">
+                    <li>EXIT</li>
+                </a>
             </ul>
+        </nav>
+
+         <!-- ブログ一覧 -->
+        <div class="archive-container">
+            <div class="archive">
+                <ul id="blogs-list">
+                </ul>
+            </div>
+        </div>
+
+        <!-- メインコンテンツ -->
+        <div class="middle-container">
+
+            <!-- ブログ本文（可変） -->
+            <div class="main">
+                <div class="blog-title">
+                    <h1 class="font-title">ブログ制作記・１</h1>
+                </div>
+                <div class="blog-date">
+                    <input type="text" class="font-date" id="blog-tag" value="2022.08.29">
+                </div>
+                <div class="blog-body">
+                    <p class="font-normal">
+                        やること<br>
+                        ・jsでのブログ一覧自動生成<br>
+                        ・<br>
+    
+                        8月中に公開する目標で鋭意製作中...<br>
+                    </p>
+                </div>
+                <div class="blog-footer">
+                    <div id="blog-footer__next" class="font-link">
+                    </div>
+                    <div id="blog-footer__pre" class="font-link">
+                    </div>
+                </div>
+            </div>
+
+            <!-- サイドバー -->
+            <div class="side-column" id="side-column">
+                <ul class="side-list">
+                    <li class="side-list__item" id="side__close">
+                        <p>×</p>
+                    </li>
+                    <li class="side-list__item">
+                        <div class="search-bar">
+                            <p>SEARCH</p>
+                        </div>
+                    </li>
+                    <li class="side-list__item">
+                        <p>INDEX</p>
+                    </li>
+                </ul>
+                <div class="contents-table">
+        
+                </div>
+            </div>
         </div>
     </div>
-    <!-- ブログ本文（可変） -->
-    <main>
-        <div class="blog-container">
-            <div class="blog-title">
-                <h1 class="font-title">ブログ制作記・１</h1>
-            </div>
-            <div class="blog-date">
-                <input type="text" class="font-date" id="blog-tag" value="2022.08.29">
-            </div>
-            <div class="blog-body">
-                やること<br>
-                ・jsでのブログ一覧自動生成<br>
-                ・<br>
-    
-                8月中に公開する目標で鋭意製作中...<br>
-            </div>
-            <div class="blog-footer">
-                <div id="blog-footer__next">
-                </div>
-                <div id="blog-footer__pre">
-                </div>
-            </div>
-        </div>
-    </main>
+    <a href="#" class="top-transition"></a>
+
     <!-- フッター -->
     <footer class="footer">
         <p class="footer__copyright">Copyright 2022 WHITE Ink. All Rights Reserved.</p>
     </footer>
+
+    <!-- モジュール -->
+    <script src="../clickEvent.js"></script>
     <script type="module" src="../setArchive.mjs"></script>
     <script type="module" src="../setPreNextButton.mjs"></script>
 </body>
